@@ -1,6 +1,13 @@
 import React, { createContext, useState, ReactNode } from "react";
 
+// Theme 타입 정의
 type Theme = "light" | "dark";
+
+// Context 데이터 구조 정의
+interface ThemeContextProps {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+}
 
 // 테마 정보를 담을 Context 상자 만들기
 const ThemeContext = createContext();
