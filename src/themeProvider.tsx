@@ -1,4 +1,4 @@
-import React, { createContext, useState, ReactNode } from "react";
+import React, { createContext, useState, ReactNode, FC } from "react";
 
 // Theme 타입 정의
 type Theme = "light" | "dark";
@@ -23,7 +23,7 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
-const ThemeProvider = ({ children }) => {
+const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
   // 기본 테마를 'light'로 설정
   const [theme, setTheme] = useState("light");
 
