@@ -1,5 +1,7 @@
 import React, { createContext, useState, ReactNode } from "react";
 
+type Theme = "light" | "dark";
+
 // 테마 정보를 담을 Context 상자 만들기
 const ThemeContext = createContext();
 
