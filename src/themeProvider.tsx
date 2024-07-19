@@ -10,7 +10,7 @@ interface ThemeContextProps {
 }
 
 // 테마 정보를 담을 Context 상자 만들기
-const ThemeContext = createContext();
+const ThemeContext = createContext<ThemeContextProps>();
 
 interface ThemeProviderProps {
   children: ReactNode;
