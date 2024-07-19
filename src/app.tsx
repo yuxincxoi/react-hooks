@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 const App = () => {
   const [count, setCount] = useState(0);
 
+  // count가 변경될 때마다 실행
   useEffect(() => {
-    console.log("컴포넌트가 마운트 됨");
-  }, []);
+    console.log("count가 변경됨");
+  }, [count]);
 
   return (
-    // 컴포넌트가 마운트 될 때 한번만 실행
     <div>
       <button onClick={() => setCount(count + 1)}>click</button>
       <p>click: {count}번</p>
