@@ -25,7 +25,7 @@ interface ThemeProviderProps {
 
 const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
   // 기본 테마를 'light'로 설정
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState<Theme>("light");
 
   // 상자의 value에 정보를 넣어서 컴포넌트 트리의 하위 컴포넌트들이 사용할 수 있도록 한다.
   return (
