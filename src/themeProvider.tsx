@@ -9,8 +9,13 @@ interface ThemeContextProps {
   setTheme: (theme: Theme) => void;
 }
 
+const defaultThemeContext: ThemeContextProps = {
+  theme: "light",
+  setTheme: () => {},
+};
+
 // 테마 정보를 담을 Context 상자 만들기
-const ThemeContext = createContext<ThemeContextProps>();
+const ThemeContext = createContext<ThemeContextProps>(defaultThemeContext);
 
 interface ThemeProviderProps {
   children: ReactNode;
