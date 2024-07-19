@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const App = () => {
-  return <div>hi</div>;
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>click</button>
+      <p>click: {count}번</p>
+    </div>
+  );
 };
 
 export default App;
