@@ -34,3 +34,5 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+export { ThemeContext, ThemeProvider };
