@@ -24,3 +24,7 @@ const reducer = (state: State, action: Action): State => {
       throw new Error();
   }
 };
+
+const Counter = () => {};
+
+export default Counter;
