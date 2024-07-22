@@ -5,11 +5,16 @@ interface State {
   count: number;
   text: string;
 }
+type Action =
+  | { type: "INCREMENT" }
+  | { type: "DECREMENT" }
+  | { type: "RESET" }
+  | { type: "SET_TEXT"; text: string };
 
 // count 초기값 설정
 const initialCount: State = { count: 0, text: "" };
 
-const reducer = (state: State, action): State => {
+const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "INCREMENT":
       return { ...state, count: state.count + 1 }; // count 속성만 업데이트하고, 나머지 state 속성은 그대로 유지
