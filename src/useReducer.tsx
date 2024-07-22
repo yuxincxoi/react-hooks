@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 
 // 상태와 액션 타입 정의
 interface State {
@@ -25,6 +25,10 @@ const reducer = (state: State, action: Action): State => {
   }
 };
 
-const Counter = () => {};
+const Counter = () => {
+  const [state, dispatch] = useReducer(reducer, initialCount);
+
+  return <div></div>;
+};
 
 export default Counter;
